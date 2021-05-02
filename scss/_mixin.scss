@@ -25,18 +25,29 @@
     color: white;
     @include respond(576px) {
       $btn-width: 180px;
+      width: $btn-width;
+      height: $btn-width / 3.75;
     }
     @include respond(575.9px) {
       font-size: 0.88rem;
       $btn-width: 30vw;
+      width: $btn-width;
+      height: $btn-width / 3.75;
     }
-    width: $btn-width;
-    height: $btn-width / 3.75;
   }
   a {
     @include flexCenter(row);
-    width: $btn-width / 3.75;
-    height: $btn-width / 3.75;
+    @include respond(576px) {
+      $btn-width: 180px;
+      width: $btn-width / 3.75;
+      height: $btn-width / 3.75;
+    }
+    @include respond(575.9px) {
+      $btn-width: 30vw;
+      width: $btn-width / 3.75;
+      height: $btn-width / 3.75;
+    }
+
     background: rgb(241, 241, 241);
     color: black;
   }
