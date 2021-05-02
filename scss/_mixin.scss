@@ -1,0 +1,70 @@
+/** @format */
+
+@mixin flexCenter($flexStyle) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $flexStyle;
+}
+
+@mixin respond($media) {
+  @if $media == 576px {
+    @media (min-width: 576px) {
+      @content;
+    }
+  }
+  @if $media == 575.9px {
+    @media (max-width: 575.9px) {
+      @content;
+    }
+  }
+}
+@mixin btn {
+  button {
+    background: red;
+    color: white;
+    @include respond(576px) {
+      $btn-width: 180px;
+    }
+    @include respond(575.9px) {
+      font-size: 0.88rem;
+      $btn-width: 30vw;
+    }
+    width: $btn-width;
+    height: $btn-width / 3.75;
+  }
+  a {
+    @include flexCenter(row);
+    width: $btn-width / 3.75;
+    height: $btn-width / 3.75;
+    background: rgb(241, 241, 241);
+    color: black;
+  }
+}
+@mixin fontStyle($size, $lineHeight, $weight, $color) {
+  font: {
+    size: $size;
+    weight: $weight;
+  }
+  color: $color;
+  line-height: $lineHeight;
+}
+
+@mixin inp {
+  $input-height: 40px;
+  input {
+    width: 100%;
+    height: $input-height;
+    padding: 0 45px 0 5px;
+  }
+  a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    @include flexCenter(row);
+    width: $input-height;
+    height: $input-height;
+    background: red;
+    color: white;
+  }
+}
