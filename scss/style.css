@@ -53,21 +53,27 @@ body button:focus {
 
 .main__nav {
   position: absolute;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.8);
   top: 0;
+  left: normal;
+  right: normal;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: 1000;
-  color: white;
   font-size: 1rem;
+  font-weight: normal;
+  color: white;
+  line-height: normal;
 }
 
 .main__nav div {
+  position: absolute;
+  top: normal;
+  left: normal;
+  right: normal;
   width: 60%;
   height: 100%;
-  background: black;
-  padding-top: 30px;
-  position: absolute;
+  background-color: black;
 }
 
 .main__nav div a {
@@ -80,18 +86,8 @@ body button:focus {
 
 .main__nav--contact {
   display: none;
-  margin-top: 10px;
   background: #141414;
-  padding-top: 15px;
   font-size: 0.9rem;
-}
-
-.main__nav--contact li {
-  padding-left: 20px;
-}
-
-.main__nav--contact li a {
-  padding-left: 15px;
 }
 
 .header {
@@ -122,17 +118,16 @@ body button:focus {
 .header header .header__logo:after {
   content: "";
   position: absolute;
+  top: normal;
+  left: normal;
+  right: normal;
   width: 500%;
   height: 25px;
-  background: white;
+  background-color: white;
   margin-left: -440%;
   -webkit-transform: skewX(-60deg);
           transform: skewX(-60deg);
   z-index: 1;
-}
-
-.header header .header__content ul {
-  margin-bottom: 0;
 }
 
 .header header .header__content ul:not(:first-child) {
@@ -147,16 +142,40 @@ body button:focus {
   line-height: 17px;
 }
 
-.header header .header__content li img {
-  margin-right: 10px;
-}
-
 .header header .header__content li a {
-  margin-top: 5px;
   font-size: inherit;
   font-weight: bold;
   color: #ee1f23;
   line-height: inherit;
+}
+
+.header header .header__content li a:hover {
+  -webkit-animation: 0.2s hoverLink;
+          animation: 0.2s hoverLink;
+}
+
+@-webkit-keyframes hoverLink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hoverLink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .header .header__navbar {
@@ -165,7 +184,23 @@ body button:focus {
 
 .header .header__navbar a {
   margin: 0 25px;
-  padding-bottom: 15px;
+}
+
+.header .header__navbar a:hover {
+  -webkit-animation: 0.2s hoverLink;
+          animation: 0.2s hoverLink;
+}
+
+@keyframes hoverLink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .header .header__navbar a:focus {
@@ -191,6 +226,7 @@ body button:focus {
 }
 
 .header .header__banner .btn--box button {
+  position: relative;
   background: red;
   color: white;
 }
@@ -246,6 +282,23 @@ body button:focus {
   font-size: 1.4rem;
 }
 
+.header .header__banner--icons a:hover {
+  -webkit-animation: 0.2s hoverLink;
+          animation: 0.2s hoverLink;
+}
+
+@keyframes hoverLink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .header .header__banner--scrollDown {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -260,31 +313,20 @@ body button:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: 95px 0 7px 0;
-}
-
-.header .header__banner--scrollDown a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  background: white;
+  margin: 95px auto 7px auto;
+  cursor: pointer;
+  position: initial;
+  top: normal;
+  left: normal;
+  right: normal;
   width: 40px;
   height: 35px;
+  background-color: white;
   -webkit-clip-path: polygon(50% 40%, 0% 100%, 100% 100%);
           clip-path: polygon(50% 40%, 0% 100%, 100% 100%);
 }
 
-.header .header__banner--scrollDown a img {
+.header .header__banner--scrollDown img {
   -webkit-transform: translateY(120%);
           transform: translateY(120%);
   width: 35%;
@@ -304,12 +346,15 @@ body button:focus {
 }
 
 .intro__img div {
-  background: #265bc5;
+  padding: 0 5px 0 10%;
   position: absolute;
+  top: normal;
+  left: normal;
+  right: 5%;
   width: 55%;
   height: 32%;
+  background-color: #265bc5;
   bottom: -5%;
-  right: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -323,25 +368,27 @@ body button:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding: 0 5px 0 10%;
   font-size: 1.25rem;
-  line-height: 1.16em;
-  color: #f8f8f8;
   font-weight: bold;
+  color: white;
+  line-height: 1.36em;
 }
 
 .intro__img div img {
   position: absolute;
   top: 15%;
   left: -9%;
+  right: normal;
   width: 25%;
+  height: auto;
+  background-color: none;
 }
 
 .intro__content--title, .info__text h3, .client__title h3, .contact__text h3 {
   font-size: 2.6rem;
-  line-height: 1.16em;
-  font-weight: 600;
+  font-weight: 700;
   color: #303030;
+  line-height: 3rem;
 }
 
 .intro__content--title span, .info__text h3 span, .client__title h3 span, .contact__text h3 span {
@@ -358,6 +405,7 @@ body button:focus {
 }
 
 .intro__content .btn--box button {
+  position: relative;
   background: red;
   color: white;
 }
@@ -454,7 +502,6 @@ body button:focus {
   font-weight: 700;
   color: #265bc5;
   line-height: 1.3rem;
-  margin: 20px 0 10px 0;
 }
 
 .info .card {
@@ -462,6 +509,11 @@ body button:focus {
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;
+}
+
+.info .card .info__card {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .info .card .info__card--anima {
@@ -560,11 +612,29 @@ body button:focus {
           flex-direction: row;
 }
 
-.info .card .info__card .card-footer i {
+.info .card .info__card .card-footer a:hover {
+  -webkit-animation: 0.2s hoverLink;
+          animation: 0.2s hoverLink;
+}
+
+@keyframes hoverLink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.info .card .info__card .card-footer a i {
   color: red;
 }
 
 .info .btn--box button {
+  position: relative;
   background: red;
   color: white;
 }
@@ -619,7 +689,6 @@ body button:focus {
 .client {
   background-image: url(../img/client/img.png);
   background-size: cover;
-  padding: 50px 0 0 0;
 }
 
 .client__avatar {
@@ -644,13 +713,14 @@ body button:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  background-color: #265bc5;
   position: absolute;
-  bottom: -6%;
+  top: normal;
+  left: normal;
   right: 5%;
   width: 66%;
   height: 20%;
-  padding: 0 10px;
+  background-color: #265bc5;
+  bottom: -6%;
   font-size: 16px;
   font-weight: bold;
   color: #f8f8f8;
@@ -662,8 +732,8 @@ body button:focus {
 }
 
 .client__content img {
-  width: 20%;
-  height: 20%;
+  width: 12%;
+  height: 13%;
 }
 
 .client__content p {
@@ -672,11 +742,28 @@ body button:focus {
 }
 
 .client__footer img {
-  max-width: 100%;
+  width: 100%;
 }
 
 .client__footer--logo {
   background: white;
+}
+
+.client__footer--logo a:hover {
+  -webkit-animation: 0.2s hoverLink;
+          animation: 0.2s hoverLink;
+}
+
+@keyframes hoverLink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .contact {
@@ -686,8 +773,7 @@ body button:focus {
 }
 
 .contact__text h3 {
-  color: white;
-  margin: 0;
+  color: white !important;
 }
 
 .contact__content {
@@ -695,6 +781,23 @@ body button:focus {
   font-weight: bold;
   color: #f8f8f8;
   line-height: 1.2rem;
+}
+
+.contact__content a:hover {
+  -webkit-animation: 0.2s hoverLink;
+          animation: 0.2s hoverLink;
+}
+
+@keyframes hoverLink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .footer {
@@ -709,15 +812,10 @@ body button:focus {
   font-weight: bold;
   color: #265bc5;
   line-height: 1.7rem;
-  margin-bottom: 20px;
 }
 
 .footer--logo {
   margin-top: -50px;
-}
-
-.footer--logo img {
-  margin-bottom: 30px;
 }
 
 .footer--logo h5 {
@@ -734,8 +832,21 @@ body button:focus {
   line-height: 1.6rem;
 }
 
-.footer--menu li:not(:first-child) {
-  margin-top: 0.8rem;
+.footer--menu a:hover {
+  -webkit-animation: 0.2s hoverLink;
+          animation: 0.2s hoverLink;
+}
+
+@keyframes hoverLink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .footer--input ul {
@@ -789,6 +900,23 @@ body button:focus {
   line-height: normal;
 }
 
+.footer--icons a:hover {
+  -webkit-animation: 0.2s hoverLink;
+          animation: 0.2s hoverLink;
+}
+
+@keyframes hoverLink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /** @format */
 @media (max-width: 991.9px) {
   .main__nav {
@@ -811,18 +939,25 @@ body button:focus {
   }
   .header__btn-menu {
     z-index: 10000;
+    position: relative;
+    top: normal;
+    left: normal;
+    right: normal;
     width: 30px;
     height: 25px;
-    position: relative;
+    background-color: none;
   }
   .header__btn-menu span {
     -webkit-transition: 0.5s;
     transition: 0.5s;
+    position: absolute;
+    top: normal;
+    left: normal;
+    right: normal;
     width: 100%;
     height: 3px;
+    background-color: black;
     border-radius: 3px;
-    background: black;
-    position: absolute;
   }
   .header__btn-menu span:first-child {
     top: 0;
@@ -870,6 +1005,9 @@ body button:focus {
 }
 
 @media (max-width: 767.9px) {
+  section:not(:first-child) {
+    margin-top: 60px !important;
+  }
   .header header {
     margin-bottom: 80px;
   }
@@ -879,6 +1017,9 @@ body button:focus {
   .header__banner h2 {
     font-size: 30px !important;
     line-height: normal !important;
+  }
+  .info .card-footer {
+    font-size: 0.76rem !important;
   }
   .client__avatar--name {
     font-size: 25px;
@@ -890,6 +1031,10 @@ body button:focus {
   }
   .client__footer--logo div a {
     width: calc(100% / 3);
+  }
+  .client__content img {
+    width: 35px;
+    height: 35px;
   }
   .process {
     padding: 5vw;
@@ -903,17 +1048,20 @@ body button:focus {
   .process ul li:first-child {
     font-size: 1.15rem;
   }
+  .footer--logo {
+    margin-top: 0 !important;
+  }
 }
 
 @media (max-width: 575.9px) {
   html {
     font-size: 14px;
   }
+  section:not(:first-child) {
+    margin-top: 10vw !important;
+  }
   header {
     margin-bottom: 12vw !important;
-  }
-  .header__logo img {
-    width: 110px;
   }
   .header__banner h2 {
     font-size: 5vw !important;
@@ -923,29 +1071,52 @@ body button:focus {
     margin: 0 0 5vw 0 !important;
   }
   .header__banner--scrollDown {
-    margin-top: 10vw !important;
-  }
-  .header__banner--scrollDown a {
+    margin-top: 8vw !important;
     width: 30px !important;
     height: 25px !important;
+  }
+  .info .card-footer {
+    font-size: 0.88rem !important;
+  }
+  .client {
+    padding-top: 5vw;
   }
   .client__avatar--name {
     font-size: 4.2vw;
     line-height: 5vw;
   }
   .client__content img {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
   }
   .intro__img div {
     font-size: 3.5vw;
   }
   .contact__content div img {
-    width: 40px;
+    width: 30px;
+  }
+  .contact {
+    padding: 5vw 0;
+  }
+  .footer--logo img {
+    width: 120px;
   }
 }
 
 @media (max-width: 480px) {
+  .header__btn-menu {
+    width: 25px;
+    height: 20px;
+  }
+  .header__logo img {
+    width: 25vw;
+  }
+  .intro__content--title, .info__text h3, .client__title h3, .contact__text h3 {
+    font-size: 7.5vw;
+    font-weight: 700;
+    color: #303030;
+    line-height: 9vw;
+  }
   .contact__content div {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -964,6 +1135,13 @@ body button:focus {
   }
   .contact__content div:nth-child(2) {
     margin-top: 1rem;
+  }
+  .footer--menu li {
+    width: calc(100% / 3);
+  }
+  .footer--menu li:nth-child(4) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

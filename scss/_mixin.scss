@@ -19,8 +19,26 @@
     }
   }
 }
+
+@mixin hoverLink {
+  &:hover {
+    animation: 0.2s hoverLink;
+    @keyframes hoverLink {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.2;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+}
 @mixin btn {
   button {
+    position: relative;
     background: red;
     color: white;
     @include respond(576px) {
@@ -47,7 +65,6 @@
       width: $btn-width / 3.75;
       height: $btn-width / 3.75;
     }
-
     background: rgb(241, 241, 241);
     color: black;
   }
@@ -78,4 +95,14 @@
     background: red;
     color: white;
   }
+}
+
+@mixin boxStyle($position, $top, $left, $right, $width, $height, $background) {
+  position: $position;
+  top: $top;
+  left: $left;
+  right: $right;
+  width: $width;
+  height: $height;
+  background-color: $background;
 }

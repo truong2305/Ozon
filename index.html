@@ -13,24 +13,30 @@
   <body>
     <!-- header  -->
     <section class="header">
-      <header>
+      <header class="pt-2 pb-2">
+        <div class="container d-lg-none pt-3">
+          <div class="row text-center">
+            <div class="col-3 offset-3"><a href="tel:028 6652 3966"><img src="./img/header/phone.svg" alt="" /></a></div>
+            <div class="col-3"><a href="mailto:info@ozonejsc.vn"><img src="./img/header/email.svg" alt="" /></a></div>
+          </div>
+        </div>
         <div class="container d-flex justify-content-between align-items-center">
           <div class="text-center header__logo">
             <a href="#"><img src="./img/header/logo.svg" alt="" /></a>
             <span class="d-none d-md-block">Materials Importer & Constructon</span>
           </div>
           <div class="header__content d-none d-lg-flex">
-            <ul class="d-flex align-items-center">
-              <li><img src="./img/header/phone.svg" alt="" /></li>
-              <li>HOTLINE<a href="#" class="d-block">028 6652 3966</a></li>
+            <ul class="d-flex align-items-center mb-0">
+              <li class="mr-2"><img src="./img/header/phone.svg" alt="" /></li>
+              <li>HOTLINE<a href="#" class="d-block mt-1">028 6652 3966</a></li>
             </ul>
-            <ul class="d-flex align-items-center">
-              <li><img src="./img/header/email.svg" alt="" /></li>
-              <li>EMAIL<a href="#" class="d-block">info@ozonejsc.vn</a></li>
+            <ul class="d-flex align-items-center mb-0">
+              <li class="mr-2"><img src="./img/header/email.svg" alt="" /></li>
+              <li>EMAIL<a href="#" class="d-block mt-1">info@ozonejsc.vn</a></li>
             </ul>
-            <ul class="d-flex align-items-center">
-              <li><img src="./img/header/clock.svg" alt="" /></li>
-              <li>GIỜ LÀM VIỆC<a href="#" class="d-block">Mon. - Fri. 08AM - 18PM</a></li>
+            <ul class="d-flex align-items-center mb-0">
+              <li class="mr-2"><img src="./img/header/clock.svg" alt="" /></li>
+              <li>GIỜ LÀM VIỆC<a href="#" class="d-block mt-1">Mon. - Fri. 08AM - 18PM</a></li>
             </ul>
           </div>
           <div class="header__btn-menu d-block d-lg-none">
@@ -40,18 +46,18 @@
       </header>
       <div class="container d-flex justify-content-center">
         <nav class="header__navbar d-none d-md-block">
-          <a href="#">TRANG CHỦ</a><a href="#">DỊCH VỤ</a><a href="#">ALBUM ẢNH</a><a href="#">CHỨNG NHẬN</a
-          ><a href="#">LIÊN HỆ</a>
+          <a href="#" class="pb-3">TRANG CHỦ</a><a href="#" class="pb-3">DỊCH VỤ</a><a href="#" class="pb-3">ALBUM ẢNH</a><a href="#" class="pb-3">CHỨNG NHẬN</a
+          ><a href="#" class="pb-3">LIÊN HỆ</a>
         </nav>
       </div>
       <hr class="d-none d-md-block" style="margin-bottom: 60px; border-top: 1px solid rgb(155, 155, 151);"/>
       <div class="container">
         <div class="row  header__banner">
           <div class="col-12 col-lg-10 col-xl-8">
-            <h2>THAY ĐỔI THÓI QUEN SỬ DỤNG VẬT LIỆU TỰ NHIÊN TRONG XÂY DỰNG DÂN DỤNG</h2>
+            <h2 class="text-justify text-sm-left">THAY ĐỔI THÓI QUEN SỬ DỤNG VẬT LIỆU TỰ NHIÊN TRONG XÂY DỰNG DÂN DỤNG</h2>
           </div>
           <div class="col-xl-7 col-lg-9 col-sm-10 col-12">
-            <p class="mt-4 mb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            <p class="mt-4 mb-5 text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
               Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
               when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
               <div class="btn--box d-flex">
@@ -64,10 +70,8 @@
           <div class="col-1 offset-xl-4 offset-lg-2 offset-1 d-none d-sm-flex flex-column header__banner--icons justify-content-end">
             <a href="#"><i class="fab fa-twitter"></i></a><a href="#" class="mt-5 mb-5"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a>
           </div>
-          <div class="col-12 header__banner--scrollDown">
-             <a href="#">
-               <img src="./img/header/Vector.svg" alt="">
-             </a>
+          <div class="header__banner--scrollDown">
+             <img src="./img/header/Vector.svg" alt="">
           </div>
         </div>
         </div>
@@ -76,12 +80,12 @@
     <!-- main-nav  -->
     <section class="d-block d-lg-none">
       <nav class="main__nav">
-        <div class=" d-flex flex-column"><a href="#">TRANG CHỦ</a><a href="#">DỊCH VỤ</a><a href="#">ALBUM ẢNH</a><a href="#">CHỨNG NHẬN</a>
+        <div class=" d-flex flex-column pt-4"><a href="#">TRANG CHỦ</a><a href="#">DỊCH VỤ</a><a href="#">ALBUM ẢNH</a><a href="#">CHỨNG NHẬN</a>
           <a href="#" class="main__nav--contact-click">LIÊN HỆ</a>
-          <ul class="main__nav--contact">
-            <li>HOTLINE:<a href="#" class="d-block">028 6652 3966</a></li>
-            <li>EMAIL:<a href="#" class="d-block">info@ozonejsc.vn</a></li>
-            <li>GIỜ LÀM VIỆC:<a href="#" class="d-block">Mon. - Fri. 08AM - 18PM</a></li>
+          <ul class="main__nav--contact pt-3">
+            <li class="pl-4">HOTLINE:<a href="#" class="d-block">028 6652 3966</a></li>
+            <li class="pl-4">EMAIL:<a href="#" class="d-block">info@ozonejsc.vn</a></li>
+            <li class="pl-4">GIỜ LÀM VIỆC:<a href="#" class="d-block">Mon. - Fri. 08AM - 18PM</a></li>
           </ul>
         </div>
       </nav>
@@ -90,28 +94,28 @@
     <section class="intro">
       <div class="container">
         <div class="row">
-          <div class="col-lg-7">
+          <div class="col-lg-7 text-center">
             <div class="intro__img">
-              <img src="./img/intro/sec2-img.jpg" alt="" />
-              <div>
+              <img src="./img/intro/sec2-img.jpg" alt=""/>
+              <div class="text-left">
                 VẬT LIỆU TỰ NHIÊN TRONG XÂY DỰNG DÂN DỤNG
                 <img src="./img/intro/kep.svg" alt="" />
               </div>
             </div>
           </div>
           <div class="col-lg-5 intro__content mt-4 mt-lg-0">
-            <h3 class="intro__content--title"><span class="d-block mb-2">OZON COMPANY</span>Về chúng tôi</h3>
-            <p class="mt-3 mb-4">
+            <h3 class="intro__content--title text-center text-lg-left mt-3 mt-lg-0"><span class="d-lg-block d-none mb-2">OZON COMPANY</span>Về chúng tôi</h3>
+            <p class="mt-xl-3 mt-lg-4 mb-4 text-justify">
               Thị trường xây dựng tại Việt Nam đang có những bước chuyển mình vô cùng mạnh mẽ trong xây dựng cơ bản, đi
               kèm với nó là thị trường. Vật Liệu xây dựng phát triển đa dạng với nhiều phân khúc và chất lượng khác
               nhau. Với mục tiêu giúp khách hàng tiếp cận được các sản phẩm vật liệu đạt tiêu chuẩn Kỹ thuật – Mỹ thuật,
               giá thành hợp lý cùng các dịch vụ chuyên nghiệp, Công Ty Ozone đã được thành lập để là cầu nối giữa nhà
               sản xuất và khách hàng. Các loại vật liệu hiện nay cần đạt các tiêu chí cao về kiến trúc nhưng không được
               thay đổi vật liệu gốc. Vật liệu đưa vào sử dụng cần có độ bền cao về chất liệu và mầu sắc.
-              <br />
-              <br />
-              Đi cùng sự phát triển của xã hội các vật liệu xây dựng mới dần được đưa vào sử dụng, chúng cần thỏa mãn
-              các tiêu chí về...
+              <span class="d-xl-inline d-lg-none d-md-inline d-none"><br />
+                <br />
+                Đi cùng sự phát triển của xã hội các vật liệu xây dựng mới dần được đưa vào sử dụng, chúng cần thỏa mãn
+                các tiêu chí về...</span>
             </p>
             <div class="btn--box d-flex">
               <button>Xem thêm</button>
@@ -132,7 +136,7 @@
               <img src="./img/process/pp.svg" alt="" /><img src="./img/process/1.png" alt="" />
             </div>
             <ul>
-              <li>1. TƯ VẤN KHÁCH HÀNG</li>
+              <li class="mb-2">1. TƯ VẤN KHÁCH HÀNG</li>
               <li>• Nhận thông tin từ khách hàng.</li>
               <li>• Tư vấn vật liệu, tư vấn nguồn cung cấp.</li>
             </ul>
@@ -142,7 +146,7 @@
               <img src="./img/process/vlxd.svg" alt="" /><img src="./img/process/2.png" alt="" />
             </div>
             <ul>
-              <li>2. TÌM KIẾM VẬT LIỆU</li>
+              <li class="mb-2">2. TÌM KIẾM VẬT LIỆU</li>
               <li>• Tìm kiếm nhà cung cấp có sản phẩm phù hợp.</li>
               <li>• Kiểm tra sản phẩm theo các tiêu chí của khách hàng.</li>
             </ul>
@@ -152,7 +156,7 @@
               <img src="./img/process/thietke.svg" alt="" /><img src="./img/process/3.png" alt="" />
             </div>
             <ul>
-              <li>3. TRÌNH MẪU - GIẢI TRÌNH</li>
+              <li class="mb-2">3. TRÌNH MẪU - GIẢI TRÌNH</li>
               <li>• Trình mẫu vật liệu theo yêu cầu của khách hàng.</li>
               <li>• Giải trình các thông số kỹ thuật, biện pháp lắp đặt.</li>
             </ul>
@@ -162,7 +166,7 @@
               <img src="./img/process/car.svg" alt="" /><img src="./img/process/4.png" alt="" />
             </div>
             <ul>
-              <li>4. GIAO HÀNG - THANH TOÁN</li>
+              <li class="mb-2">4. GIAO HÀNG - THANH TOÁN</li>
               <li>•Thống nhất hợp đồng cung ứng vật tư.</li>
               <li>•Thống nhất phương thức thanh toán và các điều khoản.</li>
               <li>•Cung cấp tài liệu liên quan đến sản phẩm.</li>
@@ -176,16 +180,16 @@
       <div class="container">
         <div class="row card-group">
           <div class="col-12 text-center info__text">
-            <h3 class="mb-4 mb-lg-5"><span class="d-block mb-2">OZON COMPANY</span>TIN TỨC</h3>
+            <h3 class="mb-4 mb-lg-5"><span class="d-sm-block d-none mb-2">OZON COMPANY</span>TIN TỨC</h3>
           </div>
-          <div class="col-lg-4 col-sm-6 mt-3 mt-lg-0 card">
-            <div class="info__card">
+          <div class="col-lg-4 col-sm-6 card">
+            <a href="#!"><div class="info__card">
               <div class="info__card--anima">
                 <img class="card-img-top" src="./img/info/Rectangle 291.png" alt="Card image cap" />
               </div>
               <div class="card-body">
                 <h5 class="card-title">Can your business become better with new technology?</h5>
-                <p class="card-text">
+                <p class="card-text text-justify text-lg-left">
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
                   labore et dolore magna aliquyam erat, sed diam voluptua.
                 </p>
@@ -194,16 +198,16 @@
                 <span><img src="./img/info/calendar 1.svg" alt="" class="mr-1" />20/08/2020</span>
                 <a href="">Xem thêm<i class="fas fa-arrow-right ml-2"></i></a>
               </div>
-            </div>
+            </div></a>
           </div>
-          <div class="col-lg-4 col-sm-6 mt-3 mt-lg-0 card">
-            <div class="info__card">
+          <div class="col-lg-4 col-sm-6 card">
+            <a href="#!"><div class="info__card">
               <div class="info__card--anima">
                 <img class="card-img-top" src="./img/info/Rectangle 291 (1).png" alt="Card image cap" />
               </div>
               <div class="card-body">
                 <h5 class="card-title">Can your business become better with new technology?</h5>
-                <p class="card-text">
+                <p class="card-text text-justify text-lg-left">
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
                   labore et dolore magna aliquyam erat, sed diam voluptua.
                 </p>
@@ -212,16 +216,16 @@
                 <span><img src="./img/info/calendar 1.svg" alt="" class="mr-1" />20/08/2020</span>
                 <a href="">Xem thêm<i class="fas fa-arrow-right ml-2"></i></a>
               </div>
-            </div>
+            </div></a>
           </div>
-          <div class="col-lg-4 col-sm-6 mt-3 mt-md-4 mt-lg-0 card">
-            <div class="info__card">
+          <div class="col-lg-4 col-sm-6 mt-0 mt-sm-4 mt-lg-0 card">
+            <a href="#!"><div class="info__card">
               <div class="info__card--anima">
                 <img class="card-img-top" src="./img/info/Rectangle 291 (2).png" alt="Card image cap" />
               </div>
               <div class="card-body">
                 <h5 class="card-title">Can your business become better with new technology?</h5>
-                <p class="card-text">
+                <p class="card-text text-justify text-lg-left">
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
                   labore et dolore magna aliquyam erat, sed diam voluptua.
                 </p>
@@ -230,9 +234,9 @@
                 <span><img src="./img/info/calendar 1.svg" alt="" class="mr-1" />20/08/2020</span>
                 <a href="">Xem thêm<i class="fas fa-arrow-right ml-2"></i></a>
               </div>
-            </div>
+            </div></a>
           </div>
-          <div class="mt-5 col-12 d-flex justify-content-center">
+          <div class="mt-sm-5 mt-1 col-12 d-flex justify-content-center">
             <div class="btn--box d-flex">
               <button>Xem tất cả</button>
               <a href="">
@@ -244,16 +248,16 @@
       </div>
     </section>
     <!-- client -->
-    <section class="client">
+    <section class="client pt-5">
       <div class="container">
         <div class="row">
           <div class="col-12 client__title">
-            <h3 class="mb-4 mb-lg-5 text-center"><span class="d-block mb-2">OZON COMPANY</span>KHÁCH HÀNG</h3>
+            <h3 class="mb-4 mb-lg-5 text-center"><span class="d-sm-block d-none mb-2">OZON COMPANY</span>KHÁCH HÀNG</h3>
           </div>
         </div>
         <div class="client__slider">
           <div class="row d-flex">
-            <div class="col-md-4 offset-lg-1 mb-4">
+            <div class="col-md-4 offset-lg-1  mb-4">
               <div class="client__avatar">
                 <img src="./img/client/client-avatar.png" alt="" />
                 <div class="client__avatar--name">
@@ -261,30 +265,9 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-8 col-lg-6 client__content d-flex mt-lg-4">
-              <img src="./img/client/kep2.png" alt="" />
-              <p class="mt-2">
-                We challenged to complete the project in just over five months. This was an incredibly fast-track
-                schedule, given that retrofits of this scale, as we were told by our own advisors. We challenged to
-                complete the project in just over five months. This was an incredibly fast-track schedule, given that
-                retrofits of this scale, as we were told by our own advisors.We challenged to complete the project in
-                just over five months. This was an incredibly fast-track schedule, given that retrofits of this scale,
-                as we were told by our own advisors.
-              </p>
-            </div>
-          </div>
-          <div class="row d-flex">
-            <div class="col-md-4 offset-lg-1 mb-4">
-              <div class="client__avatar">
-                <img src="./img/client/client-avatar.png" alt="" />
-                <div class="client__avatar--name">
-                  <span>JONATHAN ADAMS <small class="d-block">Founder, Great Wall Ltd. </small></span>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-8 col-lg-6 client__content d-flex mt-lg-4">
-              <img src="./img/client/kep2.png" alt="" />
-              <p class="mt-2">
+            <div class="col-md-8 col-lg-6 client__content d-md-flex d-block pt-2 pt-sm-3 pt-md-0 pt-lg-4">
+              <img src="./img/client/kep2.png" alt="" class="float-left mr-lg-3 mr-2 float-md-none" />
+              <p class="text-justify mt-lg-2 mb-0 mt-1 mt-sm-0">
                 We challenged to complete the project in just over five months. This was an incredibly fast-track
                 schedule, given that retrofits of this scale, as we were told by our own advisors. We challenged to
                 complete the project in just over five months. This was an incredibly fast-track schedule, given that
@@ -303,9 +286,51 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-8 col-lg-6 client__content d-flex mt-lg-4">
-              <img src="./img/client/kep2.png" alt="" />
-              <p class="mt-2">
+            <div class="col-md-8 col-lg-6 client__content d-md-flex d-block pt-2 pt-sm-3 pt-md-0 pt-lg-4">
+              <img src="./img/client/kep2.png" alt="" class="float-left mr-lg-3 mr-2 float-md-none" />
+              <p class="text-justify mt-lg-2 mb-0 mt-1 mt-sm-0">
+                We challenged to complete the project in just over five months. This was an incredibly fast-track
+                schedule, given that retrofits of this scale, as we were told by our own advisors. We challenged to
+                complete the project in just over five months. This was an incredibly fast-track schedule, given that
+                retrofits of this scale, as we were told by our own advisors.We challenged to complete the project in
+                just over five months. This was an incredibly fast-track schedule, given that retrofits of this scale,
+                as we were told by our own advisors.
+              </p>
+            </div>
+          </div>
+          <div class="row d-flex">
+            <div class="col-md-4 offset-lg-1  mb-4">
+              <div class="client__avatar">
+                <img src="./img/client/client-avatar.png" alt="" />
+                <div class="client__avatar--name">
+                  <span>JONATHAN ADAMS <small class="d-block">Founder, Great Wall Ltd. </small></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8 col-lg-6 client__content d-md-flex d-block pt-2 pt-sm-3 pt-md-0 pt-lg-4">
+              <img src="./img/client/kep2.png" alt="" class="float-left mr-lg-3 mr-2 float-md-none" />
+              <p class="text-justify mt-lg-2 mb-0 mt-1 mt-sm-0">
+                We challenged to complete the project in just over five months. This was an incredibly fast-track
+                schedule, given that retrofits of this scale, as we were told by our own advisors. We challenged to
+                complete the project in just over five months. This was an incredibly fast-track schedule, given that
+                retrofits of this scale, as we were told by our own advisors.We challenged to complete the project in
+                just over five months. This was an incredibly fast-track schedule, given that retrofits of this scale,
+                as we were told by our own advisors.
+              </p>
+            </div>
+          </div>
+          <div class="row d-flex">
+            <div class="col-md-4 offset-lg-1  mb-4">
+              <div class="client__avatar">
+                <img src="./img/client/client-avatar.png" alt="" />
+                <div class="client__avatar--name">
+                  <span>JONATHAN ADAMS <small class="d-block">Founder, Great Wall Ltd. </small></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8 col-lg-6 client__content d-md-flex d-block pt-2 pt-sm-3 pt-md-0 pt-lg-4">
+              <img src="./img/client/kep2.png" alt="" class="float-left mr-lg-3 mr-2 float-md-none" />
+              <p class="text-justify mt-lg-2 mb-0 mt-1 mt-sm-0">
                 We challenged to complete the project in just over five months. This was an incredibly fast-track
                 schedule, given that retrofits of this scale, as we were told by our own advisors. We challenged to
                 complete the project in just over five months. This was an incredibly fast-track schedule, given that
@@ -334,7 +359,7 @@
     <section class="contact">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-xl-3 contact__text mb-4 mb-xl-0"><h3>LIÊN HỆ</h3></div>
+          <div class="col-xl-3 contact__text mb-4 mb-xl-0"><h3 class="mb-0">LIÊN HỆ</h3></div>
           <div class="col-xl-9 col-12 d-flex justify-content-between contact__content flex-wrap">
             <div class="text-center">
               <img src="./img/contact/contact-addr.svg" alt="" class="mb-2" /><a href="" class="d-block"
@@ -342,12 +367,12 @@
               </a>
             </div>
             <div class="text-center">
-              <img src="./img/contact/contact_hotline.svg" alt="" class="mb-2" /><a href="" class="d-block"
+              <img src="./img/contact/contact_hotline.svg" alt="" class="mb-2" /><a href="tel:028 6652 3966" class="d-block"
                 >028 6652 3966</a
               >
             </div>
             <div class="text-center mt-3 mt-lg-0">
-              <img src="./img/contact/contact_email.svg" alt="" class="mb-2" /><a href="" class="d-block"
+              <img src="./img/contact/contact_email.svg" alt="" class="mb-2" /><a href="mailto:info@ozonejsc.vnskyqueen.vn" class="d-block"
                 >info@ozonejsc.vnskyqueen.vn
               </a>
             </div>
@@ -362,38 +387,38 @@
     </section>
     <!-- footer  -->
     <section class="footer">
-      <div class="container p-4">
+      <div class="container mb-0 mb-sm-5">
         <div class="row">
-          <div class="col-lg-5 col-md-12 footer--logo">
+          <div class="col-lg-5 col-md-12 footer--logo text-center text-lg-left">
             <img src="./img/footer/logo-1 2.svg" alt="" />
-            <h5>JOINT STOCK COMPANY</h5>
+            <h5 class="mt-md-4 mb-md-2 mb-1 mt-3">JOINT STOCK COMPANY</h5>
             <p>
               We always strive for growth and development as StylemixThemes. We don't want to have a large team, we want
               to have a team that works in unity. Our slogan is "Every day is the last day".
             </p>
           </div>
-          <div class="col-lg-3 offset-lg-1 col-md-6 mb-4 mb-md-0 footer--menu">
-            <h5>Danh mục</h5>
-            <ul>
-              <li>
-                <a href="#!"><img src="./img/footer/Ellipse 279.svg" alt="" class="mr-2" /> TRANG CHỦ</a>
+          <div class="col-lg-3 offset-lg-1 col-sm-6 footer--menu mb-2">
+            <h5 class="mb-2 mb-sm-3">Danh mục</h5>
+            <ul class="d-flex justify-content-center d-sm-block flex-wrap text-center text-sm-left">
+              <li class="pt-2 pt-sm-0">
+                <a href="#!"><img src="./img/footer/Ellipse 279.svg" alt="" class="mr-2 d-none d-sm-inline" /> TRANG CHỦ</a>
               </li>
-              <li>
-                <a href="#!"><img src="./img/footer/Ellipse 279.svg" alt="" class="mr-2" /> DỊCH VỤ</a>
+              <li class="mt-sm-3 mt-0 pl-4 pl-sm-0 pr-4 pr-sm-0 pt-2 pt-sm-0">
+                <a href="#!"><img src="./img/footer/Ellipse 279.svg" alt="" class="mr-2 d-none d-sm-inline" /> DỊCH VỤ</a>
               </li>
-              <li>
-                <a href="#!"><img src="./img/footer/Ellipse 279.svg" alt="" class="mr-2" /> ALBUM ẢNH</a>
+              <li class="mt-sm-3 mt-0 pt-2 pt-sm-0">
+                <a href="#!"><img src="./img/footer/Ellipse 279.svg" alt="" class="mr-2 d-none d-sm-inline" /> ALBUM ẢNH</a>
               </li>
-              <li>
-                <a href="#!"><img src="./img/footer/Ellipse 279.svg" alt="" class="mr-2" /> CHỨNG NHẬN</a>
+              <li class="mt-sm-3 mt-0 pl-4 pl-sm-0 pr-4 pt-2 pt-sm-0">
+                <a href="#!"><img src="./img/footer/Ellipse 279.svg" alt="" class="mr-2 d-none d-sm-inline" /> CHỨNG NHẬN</a>
               </li>
-              <li>
-                <a href="#!"><img src="./img/footer/Ellipse 279.svg" alt="" class="mr-2" /> LIÊN HỆ</a>
+              <li class="mt-sm-3 mt-0 pt-2 pt-sm-0">
+                <a href="#!"><img src="./img/footer/Ellipse 279.svg" alt="" class="mr-2 d-none d-sm-inline" /> LIÊN HỆ</a>
               </li>
             </ul>
           </div>
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0 footer--input">
-            <h5 class="text-uppercase">Đăng ký nhận tin</h5>
+          <div class="col-lg-3 col-sm-6 footer--input">
+            <h5 class="mb-2 mb-sm-3">Đăng ký nhận tin</h5>
 
             <ul>
               <li>Nhập địa chỉ email của bạn để nhận thông tin ưu đãi mới nhất</li>
@@ -410,8 +435,8 @@
           </div>
         </div>
       </div>
-      <hr />
-      <div class="text-center p-5 footer--icons">
+      <hr class="mb-0 mb-sm-3" />
+      <div class="text-center p-ms-4 p-3 footer--icons">
         <a href=""><i class="fab fa-twitter"></i></a>
         <a href="" class="mr-5 ml-5"><i class="fab fa-facebook-f"></i></a>
         <a href=""><i class="fab fa-instagram"></i></a>

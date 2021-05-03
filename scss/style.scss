@@ -44,20 +44,11 @@ body {
 }
 // main-nav
 .main__nav {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  top: 0;
+  @include boxStyle(absolute, 0, normal, normal, 100%, 100%, rgba(0, 0, 0, 0.8));
   z-index: 1000;
-  color: white;
-  font-size: 1rem;
+  @include fontStyle(1rem, normal, normal, white);
   div {
-    width: 60%;
-    height: 100%;
-    background: rgb(0, 0, 0);
-    padding-top: 30px;
-    position: absolute;
+    @include boxStyle(absolute, normal, normal, normal, 60%, 100%, rgb(0, 0, 0));
     a {
       padding: 15px 3px 15px 20px;
       &:hover {
@@ -67,16 +58,8 @@ body {
   }
   &--contact {
     display: none;
-    margin-top: 10px;
     background: rgb(20, 20, 20);
-    padding-top: 15px;
     font-size: 0.9rem;
-    li {
-      padding-left: 20px;
-      a {
-        padding-left: 15px;
-      }
-    }
   }
 }
 // header
@@ -97,31 +80,22 @@ body {
       }
       &:after {
         content: "";
-        position: absolute;
-        width: 500%;
-        height: 25px;
-        background: white;
+        @include boxStyle(absolute, normal, normal, normal, 500%, 25px, white);
         margin-left: -440%;
         transform: skewX(-60deg);
         z-index: 1;
       }
     }
     .header__content {
-      ul {
-        margin-bottom: 0;
-      }
       ul:not(:first-child) {
         margin-left: 50px;
       }
       li {
         font-family: Montserrat;
         @include fontStyle(14px, 17px, 500, #1a3761);
-        img {
-          margin-right: 10px;
-        }
         a {
-          margin-top: 5px;
           @include fontStyle(inherit, inherit, bold, #ee1f23);
+          @include hoverLink;
         }
       }
     }
@@ -130,7 +104,7 @@ body {
     color: white;
     a {
       margin: 0 25px;
-      padding-bottom: 15px;
+      @include hoverLink;
       &:focus {
         border-bottom: 3px solid #c1f8ff;
       }
@@ -149,20 +123,19 @@ body {
     }
     &--icons {
       font-size: 1.4rem;
+      a {
+        @include hoverLink;
+      }
     }
     &--scrollDown {
       @include flexCenter(row);
-      margin: 95px 0 7px 0;
-      a {
-        @include flexCenter(row);
-        background: white;
-        width: 40px;
-        height: 35px;
-        clip-path: polygon(50% 40%, 0% 100%, 100% 100%);
-        img {
-          transform: translateY(120%);
-          width: 35%;
-        }
+      margin: 95px auto 7px auto;
+      cursor: pointer;
+      @include boxStyle(initial, normal, normal, normal, 40px, 35px, white);
+      clip-path: polygon(50% 40%, 0% 100%, 100% 100%);
+      img {
+        transform: translateY(120%);
+        width: 35%;
       }
     }
   }
@@ -178,33 +151,19 @@ body {
       width: 100%;
     }
     div {
-      background: #265bc5;
-      position: absolute;
-      width: 55%;
-      height: 32%;
-      bottom: -5%;
-      right: 5%;
-      @include flexCenter(row);
       padding: 0 5px 0 10%;
-      font-size: 1.25rem;
-      line-height: 1.16em;
-      color: #f8f8f8;
-      font-weight: bold;
-
+      @include boxStyle(absolute, normal, normal, 5%, 55%, 32%, #265bc5);
+      bottom: -5%;
+      @include flexCenter(row);
+      @include fontStyle(1.25rem, 1.36em, bold, white);
       img {
-        position: absolute;
-        top: 15%;
-        left: -9%;
-        width: 25%;
+        @include boxStyle(absolute, 15%, -9%, normal, 25%, auto, none);
       }
     }
   }
   &__content {
     &--title {
-      font-size: 2.6rem;
-      line-height: 1.16em;
-      font-weight: 600;
-      color: #303030;
+      @include fontStyle(2.6rem, 3rem, 700, #303030);
       span {
         letter-spacing: 0.3em;
         @include fontStyle(0.88rem, 1rem, normal, #ee1f23);
@@ -255,7 +214,6 @@ body {
       li:first-child {
         font-family: Mulish;
         @include fontStyle(1.15rem, 1.3rem, 700, #265bc5);
-        margin: 20px 0 10px 0;
       }
     }
   }
@@ -272,6 +230,7 @@ body {
     border: none;
     flex: none;
     .info__card {
+      transition: 0.5s;
       &--anima {
         overflow: hidden;
         .card-img-top {
@@ -308,8 +267,11 @@ body {
         @include flexCenter(row);
         font-family: Roboto;
         @include fontStyle(0.88rem, 1rem, normal, #303030);
-        i {
-          color: red;
+        a {
+          @include hoverLink;
+          i {
+            color: red;
+          }
         }
       }
     }
@@ -318,11 +280,11 @@ body {
     @include btn;
   }
 }
+
 // client
 .client {
   background-image: url(../img/client/img.png);
   background-size: cover;
-  padding: 50px 0 0 0;
   &__title {
     h3 {
       @extend .intro__content--title;
@@ -335,13 +297,8 @@ body {
     }
     &--name {
       @include flexCenter(row);
-      background-color: #265bc5;
-      position: absolute;
+      @include boxStyle(absolute, normal, normal, 5%, 66%, 20%, #265bc5);
       bottom: -6%;
-      right: 5%;
-      width: 66%;
-      height: 20%;
-      padding: 0 10px;
       @include fontStyle(16px, 1.3rem, bold, #f8f8f8);
       small {
         font-weight: 400;
@@ -350,8 +307,8 @@ body {
   }
   &__content {
     img {
-      width: 20%;
-      height: 20%;
+      width: 12%;
+      height: 13%;
     }
     p {
       line-height: 1.37rem;
@@ -360,13 +317,17 @@ body {
   }
   &__footer {
     img {
-      max-width: 100%;
+      width: 100%;
     }
     &--logo {
       background: white;
+      a {
+        @include hoverLink;
+      }
     }
   }
 }
+
 // contact
 .contact {
   background-image: url(../img/contact/contacbg.png);
@@ -375,12 +336,14 @@ body {
   &__text {
     h3 {
       @extend .intro__content--title;
-      color: white;
-      margin: 0;
+      color: white !important;
     }
   }
   &__content {
     @include fontStyle(0.88rem, 1.2rem, bold, #f8f8f8);
+    a {
+      @include hoverLink;
+    }
   }
 }
 
@@ -389,13 +352,9 @@ body {
   @include fontStyle(0.88rem, 1.2rem, 600, #505050);
   h5 {
     @include fontStyle(1.25rem, 1.7rem, bold, #265bc5);
-    margin-bottom: 20px;
   }
   &--logo {
     margin-top: -50px;
-    img {
-      margin-bottom: 30px;
-    }
     h5 {
       @include fontStyle(1rem, 1.37rem, 800, #303030);
     }
@@ -403,8 +362,10 @@ body {
       @include fontStyle(0.94rem, 1.6rem, normal, inherit);
     }
   }
-  &--menu li:not(:first-child) {
-    margin-top: 0.8rem;
+  &--menu {
+    a {
+      @include hoverLink;
+    }
   }
   &--input {
     ul {
@@ -420,6 +381,9 @@ body {
   }
   &--icons {
     @include fontStyle(1.8rem, normal, normal, #265bc5);
+    a {
+      @include hoverLink;
+    }
   }
 }
 @import "responsive";
