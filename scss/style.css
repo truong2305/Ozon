@@ -178,6 +178,31 @@ body button:focus {
   }
 }
 
+.header header .header__contact {
+  border-radius: 20px;
+  background: #fbfbfb;
+  -webkit-box-shadow: -3px -3px 3px white, 3px 3px 5px rgba(70, 70, 70, 0.5);
+          box-shadow: -3px -3px 3px white, 3px 3px 5px rgba(70, 70, 70, 0.5);
+}
+
+.header header .header__contact a {
+  background: -webkit-gradient(linear, left bottom, left top, from(#ddd), to(#fff));
+  background: linear-gradient(0deg, #ddd, #fff);
+  color: #7a7a7a;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  -webkit-box-shadow: -3px -3px 3px white, 3px 3px 5px rgba(70, 70, 70, 0.5);
+          box-shadow: -3px -3px 3px white, 3px 3px 5px rgba(70, 70, 70, 0.5);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.header header .header__contact a:hover {
+  -webkit-box-shadow: inset -3px -3px 3px white, inset 3px 3px 5px rgba(70, 70, 70, 0.5);
+          box-shadow: inset -3px -3px 3px white, inset 3px 3px 5px rgba(70, 70, 70, 0.5);
+  color: seagreen;
+}
+
 .header .header__navbar {
   color: white;
 }
@@ -943,8 +968,8 @@ body button:focus {
     top: normal;
     left: normal;
     right: normal;
-    width: 30px;
-    height: 25px;
+    width: 35px;
+    height: 30px;
     background-color: none;
   }
   .header__btn-menu span {
@@ -955,8 +980,8 @@ body button:focus {
     left: normal;
     right: normal;
     width: 100%;
-    height: 3px;
-    background-color: black;
+    height: 4px;
+    background-color: #717171;
     border-radius: 3px;
   }
   .header__btn-menu span:first-child {
@@ -971,7 +996,7 @@ body button:focus {
             transform: translateY(-50%);
   }
   .close-menu span {
-    background: #e9e9e9 !important;
+    background: #cccbcb !important;
   }
   .close-menu span:last-child {
     top: 45%;
@@ -1060,6 +1085,10 @@ body button:focus {
   section:not(:first-child) {
     margin-top: 10vw !important;
   }
+  .header__btn-menu {
+    width: 25px;
+    height: 20px;
+  }
   header {
     margin-bottom: 12vw !important;
   }
@@ -1104,10 +1133,6 @@ body button:focus {
 }
 
 @media (max-width: 480px) {
-  .header__btn-menu {
-    width: 25px;
-    height: 20px;
-  }
   .header__logo img {
     width: 25vw;
   }

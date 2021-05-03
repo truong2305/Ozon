@@ -36,6 +36,7 @@
     }
   }
 }
+
 @mixin btn {
   button {
     position: relative;
@@ -69,6 +70,7 @@
     color: black;
   }
 }
+
 @mixin fontStyle($size, $lineHeight, $weight, $color) {
   font: {
     size: $size;

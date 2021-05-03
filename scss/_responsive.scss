@@ -18,10 +18,10 @@
   }
   .header__btn-menu {
     z-index: 10000;
-    @include boxStyle(relative, normal, normal, normal, 30px, 25px, none);
+    @include boxStyle(relative, normal, normal, normal, 35px, 30px, none);
     span {
       transition: 0.5s;
-      @include boxStyle(absolute, normal, normal, normal, 100%, 3px, black);
+      @include boxStyle(absolute, normal, normal, normal, 100%, 4px, #717171);
       border-radius: 3px;
       &:first-child {
         top: 0;
@@ -37,7 +37,7 @@
   }
   .close-menu {
     span {
-      background: rgb(233, 233, 233) !important;
+      background: rgb(204, 203, 203) !important;
       &:last-child {
         top: 45%;
         transform: rotate(-225deg);
@@ -130,6 +130,10 @@
   section:not(:first-child) {
     margin-top: 10vw !important;
   }
+  .header__btn-menu {
+    width: 25px;
+    height: 20px;
+  }
   header {
     margin-bottom: 12vw !important;
   }
@@ -179,10 +183,6 @@
   }
 }
 @media (max-width: 480px) {
-  .header__btn-menu {
-    width: 25px;
-    height: 20px;
-  }
   .header__logo {
     img {
       width: 25vw;

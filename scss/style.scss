@@ -99,6 +99,23 @@ body {
         }
       }
     }
+    .header__contact {
+      border-radius: 20px;
+      background: rgb(251, 251, 251);
+      box-shadow: -3px -3px 3px rgb(255, 255, 255), 3px 3px 5px rgba(70, 70, 70, 0.5);
+      a {
+        background: linear-gradient(0deg, #ddd, #fff);
+        color: #7a7a7a;
+        font-size: 1.2rem;
+        border-radius: 50%;
+        box-shadow: -3px -3px 3px rgb(255, 255, 255), 3px 3px 5px rgba(70, 70, 70, 0.5);
+        transition: 0.2s;
+        &:hover {
+          box-shadow: inset -3px -3px 3px rgb(255, 255, 255), inset 3px 3px 5px rgba(70, 70, 70, 0.5);
+          color: seagreen;
+        }
+      }
+    }
   }
   .header__navbar {
     color: white;
