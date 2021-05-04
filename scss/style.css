@@ -144,7 +144,7 @@ body button:focus {
 
 .header header .header__content li a {
   font-size: inherit;
-  font-weight: bold;
+  font-weight: 600;
   color: #ee1f23;
   line-height: inherit;
 }
@@ -155,7 +155,7 @@ body button:focus {
 
 .header header .header__contact {
   border-radius: 20px;
-  background: #fbfbfb;
+  background: #e2dfdf;
   -webkit-box-shadow: -3px -3px 3px white, 3px 3px 5px rgba(70, 70, 70, 0.5);
           box-shadow: -3px -3px 3px white, 3px 3px 5px rgba(70, 70, 70, 0.5);
 }

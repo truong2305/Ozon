@@ -94,14 +94,14 @@ body {
         font-family: Montserrat;
         @include fontStyle(14px, 17px, 500, #1a3761);
         a {
-          @include fontStyle(inherit, inherit, bold, #ee1f23);
+          @include fontStyle(inherit, inherit, 600, #ee1f23);
           @include hoverLink;
         }
       }
     }
     .header__contact {
       border-radius: 20px;
-      background: rgb(251, 251, 251);
+      background: rgb(226, 223, 223);
       box-shadow: -3px -3px 3px rgb(255, 255, 255), 3px 3px 5px rgba(70, 70, 70, 0.5);
       a {
         background: linear-gradient(0deg, #ddd, #fff);
