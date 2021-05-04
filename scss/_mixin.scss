@@ -22,18 +22,7 @@
 
 @mixin hoverLink {
   &:hover {
-    animation: 0.2s hoverLink;
-    @keyframes hoverLink {
-      0% {
-        opacity: 1;
-      }
-      50% {
-        opacity: 0.2;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
+    opacity: 0.6;
   }
 }
 
