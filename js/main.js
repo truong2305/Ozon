@@ -5,7 +5,7 @@ $(document).ready(function(){
           infinite: true,
           speed: 1000,
           slidesToShow: 1,
-          // autoplay: true,
+          autoplay: true,
           autoplaySpeed: 2000,
         });
       $('.header__btn-menu').click(function(){
