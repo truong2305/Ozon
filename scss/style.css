@@ -2,6 +2,7 @@
 @import url(./boostrap/css/bootstrap.min.css);
 @import url(./slick-1.8.1/slick/slick.css);
 @import url(./slick-1.8.1/slick/slick-theme.css);
+@import url(./animate.css);
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600;700;800;900&display=swap");
@@ -212,6 +213,34 @@ body button:focus {
   line-height: 1.4rem;
 }
 
+.header .header__banner .btn--box {
+  position: relative;
+  overflow: hidden;
+}
+
+.header .header__banner .btn--box::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 50%);
+  -webkit-transform: skewX(-45deg);
+          transform: skewX(-45deg);
+  left: -60%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  z-index: -1;
+}
+
+.header .header__banner .btn--box:hover {
+  opacity: 0.8;
+}
+
+.header .header__banner .btn--box:hover::before {
+  left: 100%;
+  z-index: 1000;
+}
+
 .header .header__banner .btn--box button {
   position: relative;
   background: red;
@@ -287,7 +316,7 @@ body button:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: 95px auto 7px auto;
+  margin: 75px auto 7px auto;
   cursor: pointer;
   position: initial;
   top: normal;
@@ -298,6 +327,10 @@ body button:focus {
   background-color: white;
   -webkit-clip-path: polygon(50% 40%, 0% 100%, 100% 100%);
           clip-path: polygon(50% 40%, 0% 100%, 100% 100%);
+}
+
+.header .header__banner--scrollDown:hover {
+  opacity: 0.6;
 }
 
 .header .header__banner--scrollDown img {
@@ -378,6 +411,34 @@ body button:focus {
   color: #505050;
 }
 
+.intro__content .btn--box {
+  position: relative;
+  overflow: hidden;
+}
+
+.intro__content .btn--box::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 50%);
+  -webkit-transform: skewX(-45deg);
+          transform: skewX(-45deg);
+  left: -60%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  z-index: -1;
+}
+
+.intro__content .btn--box:hover {
+  opacity: 0.8;
+}
+
+.intro__content .btn--box:hover::before {
+  left: 100%;
+  z-index: 1000;
+}
+
 .intro__content .btn--box button {
   position: relative;
   background: red;
@@ -432,7 +493,8 @@ body button:focus {
 }
 
 .process {
-  background-image: url(../img/process/process-bg.jpg);
+  background: url(../img/process/process-bg.jpg) no-repeat;
+  background-size: cover;
   padding: 80px;
 }
 
@@ -592,6 +654,34 @@ body button:focus {
 
 .info .card .info__card .card-footer a i {
   color: red;
+}
+
+.info .btn--box {
+  position: relative;
+  overflow: hidden;
+}
+
+.info .btn--box::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 50%);
+  -webkit-transform: skewX(-45deg);
+          transform: skewX(-45deg);
+  left: -60%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  z-index: -1;
+}
+
+.info .btn--box:hover {
+  opacity: 0.8;
+}
+
+.info .btn--box:hover::before {
+  left: 100%;
+  z-index: 1000;
 }
 
 .info .btn--box button {
@@ -916,9 +1006,6 @@ body button:focus {
 @media (max-width: 767.9px) {
   section:not(:first-child) {
     margin-top: 60px !important;
-  }
-  .header header {
-    margin-bottom: 80px;
   }
   .header__logo::after {
     display: none;

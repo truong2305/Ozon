@@ -3,6 +3,7 @@
 @import url(./boostrap/css/bootstrap.min.css);
 @import url(./slick-1.8.1/slick/slick.css);
 @import url(./slick-1.8.1/slick/slick-theme.css);
+@import url(./animate.css);
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600;700;800;900&display=swap");
@@ -146,10 +147,13 @@ body {
     }
     &--scrollDown {
       @include flexCenter(row);
-      margin: 95px auto 7px auto;
+      margin: 75px auto 7px auto;
       cursor: pointer;
       @include boxStyle(initial, normal, normal, normal, 40px, 35px, white);
       clip-path: polygon(50% 40%, 0% 100%, 100% 100%);
+      &:hover {
+        opacity: 0.6;
+      }
       img {
         transform: translateY(120%);
         width: 35%;
@@ -198,7 +202,8 @@ body {
 
 // process
 .process {
-  background-image: url(../img/process/process-bg.jpg);
+  background: url(../img/process/process-bg.jpg) no-repeat;
+  background-size: cover;
   padding: 80px;
   &__container {
     padding: 3%;
