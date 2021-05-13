@@ -37,6 +37,9 @@ body {
     }
   }
 }
+input:focus {
+  outline: none;
+}
 .slick-dots li.slick-active button:before {
   font-size: 13px;
   color: red;
