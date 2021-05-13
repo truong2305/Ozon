@@ -18,6 +18,6 @@ $(document).ready(function(){
       $('.header__banner--scrollDown').click(function(){
         $('html,body').animate({
           scrollTop:$('.intro').offset().top
-        },500);
+        },300);
       });
 })
