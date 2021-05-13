@@ -6,7 +6,6 @@
   align-items: center;
   flex-direction: $flexStyle;
 }
-
 @mixin respond($media) {
   @if $media == 576px {
     @media (min-width: 576px) {
