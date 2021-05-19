@@ -55,9 +55,6 @@ input:focus {
     @include boxStyle(absolute, normal, normal, normal, 60%, 100%, rgb(0, 0, 0));
     a {
       padding: 15px 3px 15px 20px;
-      &:hover {
-        background: #2c4985;
-      }
     }
   }
   &--contact {
@@ -99,7 +96,11 @@ input:focus {
         @include fontStyle(14px, 17px, 500, #1a3761);
         a {
           @include fontStyle(inherit, inherit, 600, #ee1f23);
-          @include hoverLink;
+          @include hoverLink(rgb(171, 0, 0));
+        }
+        span {
+          color: #ee1f23;
+          font-weight: 600;
         }
       }
     }
@@ -113,11 +114,6 @@ input:focus {
         font-size: 1.4rem;
         border-radius: 50%;
         box-shadow: -3px -3px 3px rgb(255, 255, 255), 3px 3px 5px rgba(70, 70, 70, 0.5);
-        transition: 0.2s;
-        &:hover {
-          box-shadow: inset -3px -3px 3px rgb(255, 255, 255), inset 3px 3px 5px rgba(70, 70, 70, 0.5);
-          color: seagreen;
-        }
       }
     }
   }
@@ -125,9 +121,27 @@ input:focus {
     color: white;
     a {
       margin: 0 25px;
-      @include hoverLink;
-      &:focus {
-        border-bottom: 3px solid #c1f8ff;
+      padding-bottom: 17px;
+      position: relative;
+      transition: 0.3s;
+      &::after {
+        content: "";
+        background: #9fddd6;
+        width: 100%;
+        height: 2px;
+        transform: scale(0);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: 0.2s;
+      }
+      @include respond(1025px) {
+        &:hover {
+          opacity: 0.7;
+          &:after {
+            transform: scale(1.1);
+          }
+        }
       }
     }
   }
@@ -145,7 +159,7 @@ input:focus {
     &--icons {
       font-size: 1.4rem;
       a {
-        @include hoverLink;
+        @include hoverLink(rgb(1, 158, 255));
       }
     }
     &--scrollDown {
@@ -154,8 +168,11 @@ input:focus {
       cursor: pointer;
       @include boxStyle(initial, normal, normal, normal, 40px, 35px, white);
       clip-path: polygon(50% 40%, 0% 100%, 100% 100%);
-      &:hover {
-        opacity: 0.6;
+      transition: 0.3s;
+      @include respond(1025px) {
+        &:hover {
+          opacity: 0.6;
+        }
       }
       img {
         transform: translateY(120%);
@@ -196,6 +213,7 @@ input:focus {
     p {
       font-family: Open Sans;
       color: #505050;
+      line-height: 1.35rem;
     }
     .btn--box {
       @include btn;
@@ -256,24 +274,22 @@ input:focus {
     flex: none;
     .info__card {
       transition: 0.5s;
-      &--anima {
-        overflow: hidden;
-        .card-img-top {
-          &:hover {
-            animation: anima 0.5s;
-            @keyframes anima {
-              0% {
-                transform: scale(1);
-              }
-              50% {
-                transform: scale(1.05);
-              }
-              100% {
-                transform: scale(1);
-              }
+      @include respond(1025px) {
+        &:hover .card-img-top {
+          animation: anima 0.5s;
+          @keyframes anima {
+            0%,
+            100% {
+              transform: scale(1);
+            }
+            50% {
+              transform: scale(1.05);
             }
           }
         }
+      }
+      &--anima {
+        overflow: hidden;
       }
       h5 {
         @include fontStyle(1.25rem, 1.85rem, bold, #333333);
@@ -282,8 +298,10 @@ input:focus {
         font-family: Montserrat;
         @include fontStyle(0.88rem, 1.06rem, normal, #555555);
       }
-      &:hover {
-        box-shadow: 0px 0px 30px rgba(103, 92, 92, 0.25);
+      @include respond(1025px) {
+        &:hover {
+          box-shadow: 0px 0px 30px rgba(103, 92, 92, 0.25);
+        }
       }
       .card-footer {
         span {
@@ -293,7 +311,7 @@ input:focus {
         font-family: Roboto;
         @include fontStyle(0.88rem, 1rem, normal, #303030);
         a {
-          @include hoverLink;
+          @include hoverLink(black);
           i {
             color: red;
           }
@@ -308,7 +326,7 @@ input:focus {
 
 // client
 .client {
-  background-image: url(../img/client/img.png);
+  background-image: url(../img/client/bgclient.jpg);
   background-size: cover;
   &__title {
     h3 {
@@ -341,13 +359,14 @@ input:focus {
     }
   }
   &__footer {
+    padding-top: 130px;
     img {
       width: 100%;
     }
     &--logo {
       background: white;
       a {
-        @include hoverLink;
+        @include hoverLink(none);
       }
     }
   }
@@ -367,7 +386,7 @@ input:focus {
   &__content {
     @include fontStyle(0.88rem, 1.2rem, bold, #f8f8f8);
     a {
-      @include hoverLink;
+      @include hoverLink(black);
     }
   }
 }
@@ -389,7 +408,10 @@ input:focus {
   }
   &--menu {
     a {
-      @include hoverLink;
+      @include hoverLink(rgb(250, 142, 0));
+    }
+    li:not(:first-child) {
+      padding-top: 15px;
     }
   }
   &--input {
@@ -399,15 +421,12 @@ input:focus {
         position: relative;
         @include inp;
       }
-      img {
-        width: 100%;
-      }
     }
   }
   &--icons {
     @include fontStyle(1.8rem, normal, normal, #265bc5);
     a {
-      @include hoverLink;
+      @include hoverLink(rgb(35, 72, 208));
     }
   }
 }

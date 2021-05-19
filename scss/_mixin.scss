@@ -17,17 +17,29 @@
       @content;
     }
   }
+  @if $media == 1025px {
+    @media (min-width: 1025px) {
+      @content;
+    }
+  }
 }
 
-@mixin hoverLink {
-  &:hover {
-    opacity: 0.6;
+@mixin hoverLink($color) {
+  @include respond(1025px) {
+    transition: 0.3s;
+    &:hover {
+      opacity: 0.5;
+      color: $color;
+    }
   }
 }
 
 @mixin btn {
   position: relative;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  transition: 0.4s;
   &::before {
     position: absolute;
     content: "";
@@ -39,11 +51,13 @@
     transition: 0.4s;
     z-index: -1;
   }
-  &:hover {
-    opacity: 0.8;
-    &::before {
-      left: 100%;
-      z-index: 1000;
+  @include respond(1025px) {
+    &:hover {
+      opacity: 0.7;
+      &::before {
+        left: 100%;
+        z-index: 1000;
+      }
     }
   }
   button {
@@ -91,9 +105,11 @@
 @mixin inp {
   $input-height: 40px;
   input {
+    background: rgb(245, 245, 245);
     width: 100%;
     height: $input-height;
     padding: 0 45px 0 5px;
+    border: 1px solid rgb(206, 205, 205);
   }
   a {
     position: absolute;

@@ -68,6 +68,9 @@
   .contact__content div {
     width: 50%;
   }
+  .client__footer {
+    padding-top: 8vw;
+  }
 }
 @media (max-width: 767.9px) {
   section:not(:first-child) {
@@ -104,10 +107,7 @@
     height: 35px;
   }
   .process {
-    padding: 5vw;
-    &__container:not(:first-child) {
-      margin-top: 5vw;
-    }
+    padding: 4.5vw;
     ul {
       font-size: 0.88rem;
       li:first-child {
@@ -177,6 +177,9 @@
       width: 120px;
     }
   }
+  .footer--menu li {
+    padding: 5px 10px !important;
+  }
 }
 @media (max-width: 480px) {
   .header__logo {
@@ -186,6 +189,9 @@
   }
   .intro__content--title {
     @include fontStyle(7.5vw, 9vw, 700, #303030);
+    span {
+      letter-spacing: 0.7vw;
+    }
   }
   .contact__content div {
     display: flex;
@@ -200,13 +206,6 @@
     }
     &:nth-child(2) {
       margin-top: 1rem;
-    }
-  }
-  .footer--menu li {
-    width: calc(100% / 3);
-    &:nth-child(4) {
-      padding-left: 0 !important;
-      padding-right: 0 !important;
     }
   }
 }
