@@ -408,7 +408,7 @@ input:focus {
   }
   &--menu {
     a {
-      @include hoverLink(rgb(250, 142, 0));
+      @include hoverLink(rgb(245, 150, 26));
     }
     li:not(:first-child) {
       padding-top: 15px;

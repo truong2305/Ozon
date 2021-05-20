@@ -948,7 +948,7 @@ input:focus {
   }
   .footer--menu a:hover {
     opacity: 0.5;
-    color: #fa8e00;
+    color: #f5961a;
   }
 }
 
@@ -1237,6 +1237,9 @@ input:focus {
   }
   .contact__content div:nth-child(2) {
     margin-top: 1rem;
+  }
+  .footer--menu li {
+    width: 119px;
   }
 }
 /*# sourceMappingURL=style.css.map */
