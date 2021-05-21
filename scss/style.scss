@@ -96,7 +96,7 @@ input:focus {
         @include fontStyle(14px, 17px, 500, #1a3761);
         a {
           @include fontStyle(inherit, inherit, bold, #ee1f23);
-          @include hoverLink(rgb(171, 0, 0));
+          @include hoverLink(rgb(255, 139, 139), 1);
         }
         span {
           color: #ee1f23;
@@ -159,7 +159,7 @@ input:focus {
     &--icons {
       font-size: 1.4rem;
       a {
-        @include hoverLink(rgb(1, 158, 255));
+        @include hoverLink(rgb(1, 128, 255), 1);
       }
     }
     &--scrollDown {
@@ -311,7 +311,7 @@ input:focus {
         font-family: Roboto;
         @include fontStyle(0.88rem, 1rem, normal, #303030);
         a {
-          @include hoverLink(black);
+          @include hoverLink(black, 0.7);
           i {
             color: red;
           }
@@ -367,7 +367,7 @@ input:focus {
     &--logo {
       background: white;
       a {
-        @include hoverLink(none);
+        @include hoverLink(none, 0.6);
       }
     }
   }
@@ -388,7 +388,7 @@ input:focus {
   &__content {
     @include fontStyle(0.88rem, 1.2rem, bold, #f8f8f8);
     a {
-      @include hoverLink(white);
+      @include hoverLink(white, 0.7);
     }
   }
 }
@@ -411,7 +411,7 @@ input:focus {
   }
   &--menu {
     a {
-      @include hoverLink(rgb(245, 150, 26));
+      @include hoverLink(rgb(245, 150, 26), 0.8);
     }
     li:not(:first-child) {
       padding-top: 15px;
@@ -429,7 +429,7 @@ input:focus {
   &--icons {
     @include fontStyle(1.8rem, normal, normal, #265bc5);
     a {
-      @include hoverLink(rgb(1, 208, 255));
+      @include hoverLink(rgb(1, 208, 255), 0.8);
     }
   }
 }

@@ -24,11 +24,11 @@
   }
 }
 
-@mixin hoverLink($color) {
+@mixin hoverLink($color, $opacity) {
   @include respond(1025px) {
     transition: 0.3s;
     &:hover {
-      opacity: 0.5;
+      opacity: $opacity;
       color: $color;
     }
   }

@@ -156,8 +156,8 @@ input:focus {
     transition: 0.3s;
   }
   .header__top .header__content li a:hover {
-    opacity: 0.5;
-    color: #ab0000;
+    opacity: 1;
+    color: #ff8b8b;
   }
 }
 
@@ -337,8 +337,8 @@ input:focus {
     transition: 0.3s;
   }
   .header .header__banner--icons a:hover {
-    opacity: 0.5;
-    color: #019eff;
+    opacity: 1;
+    color: #0180ff;
   }
 }
 
@@ -704,7 +704,7 @@ input:focus {
     transition: 0.3s;
   }
   .info .card .info__card .card-footer a:hover {
-    opacity: 0.5;
+    opacity: 0.7;
     color: black;
   }
 }
@@ -877,7 +877,7 @@ input:focus {
     transition: 0.3s;
   }
   .client__footer--logo a:hover {
-    opacity: 0.5;
+    opacity: 0.6;
     color: none;
   }
 }
@@ -906,7 +906,7 @@ input:focus {
     transition: 0.3s;
   }
   .contact__content a:hover {
-    opacity: 0.5;
+    opacity: 0.7;
     color: white;
   }
 }
@@ -950,7 +950,7 @@ input:focus {
     transition: 0.3s;
   }
   .footer--menu a:hover {
-    opacity: 0.5;
+    opacity: 0.8;
     color: #f5961a;
   }
 }
@@ -1014,7 +1014,7 @@ input:focus {
     transition: 0.3s;
   }
   .footer--icons a:hover {
-    opacity: 0.5;
+    opacity: 0.8;
     color: #01d0ff;
   }
 }
