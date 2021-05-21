@@ -240,12 +240,12 @@
     align-items: center;
     width: 100%;
     img {
-      display: inline !important;
       margin: 0 10px 0 0 !important;
     }
     a {
       text-align: left !important;
-      display: inline !important;
+      display: flex !important;
+      align-items: center;
     }
     &:nth-child(2) {
       margin-top: 1rem;

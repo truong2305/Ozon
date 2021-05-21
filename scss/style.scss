@@ -390,6 +390,9 @@ input:focus {
     a {
       @include hoverLink(white, 0.7);
     }
+    div {
+      max-width: 260px;
+    }
   }
 }
 
