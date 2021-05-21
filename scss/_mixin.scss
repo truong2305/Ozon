@@ -71,7 +71,7 @@
     }
     @include respond(575.9px) {
       font-size: 0.88rem;
-      $btn-width: 30vw;
+      $btn-width: 120px;
       width: $btn-width;
       height: $btn-width / 3.75;
     }
@@ -84,7 +84,7 @@
       height: $btn-width / 3.75;
     }
     @include respond(575.9px) {
-      $btn-width: 30vw;
+      $btn-width: 120px;
       width: $btn-width / 3.75;
       height: $btn-width / 3.75;
     }

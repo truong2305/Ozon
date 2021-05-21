@@ -53,7 +53,17 @@
       }
     }
   }
+  .intro__content--title {
+    font-size: 35px;
+    line-height: 45px;
+    span {
+      letter-spacing: 0.2em;
+    }
+  }
   .process {
+    .container {
+      padding: 0 30px;
+    }
     ul {
       font-size: 1.5vw;
       li:first-child {
@@ -87,12 +97,16 @@
       }
     }
   }
+  .intro__content--title {
+    font-size: 30px;
+    line-height: 35px;
+  }
   .info .card-footer {
     font-size: 0.76rem !important;
   }
   .client__avatar--name {
-    font-size: 25px;
-    line-height: 30px;
+    font-size: 16px;
+    line-height: 20px;
   }
   .client__footer--logo {
     div {
@@ -106,6 +120,9 @@
     width: 35px;
     height: 35px;
   }
+  .contact__content div img {
+    width: 40px;
+  }
   .process {
     padding: 4.5vw;
     ul {
@@ -115,8 +132,11 @@
       }
     }
   }
-  .footer--logo {
-    margin-top: 0 !important;
+  .footer {
+    margin-top: 50px !important;
+    &--logo {
+      margin-top: 0 !important;
+    }
   }
 }
 @media (max-width: 575.9px) {
@@ -126,14 +146,24 @@
   section:not(:first-child) {
     margin-top: 10vw !important;
   }
+  [class^="col-"] {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .header__btn-menu {
     width: 25px;
     height: 20px;
   }
   header {
     margin-bottom: 12vw !important;
+    .container {
+      padding: 0 10px;
+    }
   }
   .header {
+    &__top {
+      margin-bottom: 0;
+    }
     &__banner {
       h2 {
         font-size: 5vw !important;
@@ -149,15 +179,27 @@
       }
     }
   }
+  .process {
+    padding: 10px;
+    .container {
+      padding: 0 15px;
+    }
+  }
   .info .card-footer {
     font-size: 0.88rem !important;
   }
   .client {
     padding-top: 5vw;
+    .container {
+      padding: 0 10px;
+    }
+    .row {
+      margin: 0 -10px;
+    }
   }
   .client__avatar--name {
-    font-size: 4.2vw;
-    line-height: 5vw;
+    font-size: 3.2vw;
+    line-height: 4vw;
   }
   .client__content img {
     width: 20px;
@@ -172,13 +214,16 @@
   .contact {
     padding: 5vw 0;
   }
-  .footer--logo {
-    img {
-      width: 120px;
+  .footer {
+    margin-top: 10vw !important;
+    &--logo {
+      img {
+        width: 120px;
+      }
     }
-  }
-  .footer--menu li {
-    padding: 5px 10px !important;
+    &--menu li {
+      padding: 5px 10px !important;
+    }
   }
 }
 @media (max-width: 480px) {
@@ -188,20 +233,18 @@
     }
   }
   .intro__content--title {
-    @include fontStyle(7.5vw, 9vw, 700, #303030);
-    span {
-      letter-spacing: 0.7vw;
-    }
+    @include fontStyle(25px, 30px, 700, #303030);
   }
   .contact__content div {
     display: flex;
     align-items: center;
     width: 100%;
-    text-align: left !important;
     img {
-      margin: 0 10px !important;
+      display: inline !important;
+      margin: 0 10px 0 0 !important;
     }
     a {
+      text-align: left !important;
       display: inline !important;
     }
     &:nth-child(2) {
@@ -209,6 +252,6 @@
     }
   }
   .footer--menu li {
-    width: 119px;
+    min-width: 119px;
   }
 }

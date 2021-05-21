@@ -96,16 +96,16 @@ input:focus {
   background-size: cover;
 }
 
-.header header {
+.header__top {
   background: white;
   margin-bottom: 50px;
 }
 
-.header header .header__logo {
+.header__top .header__logo {
   position: relative;
 }
 
-.header header .header__logo span {
+.header__top .header__logo span {
   position: relative;
   font-size: 13px;
   font-weight: bold;
@@ -116,7 +116,7 @@ input:focus {
   z-index: 3;
 }
 
-.header header .header__logo:after {
+.header__top .header__logo:after {
   content: "";
   position: absolute;
   top: normal;
@@ -131,11 +131,11 @@ input:focus {
   z-index: 1;
 }
 
-.header header .header__content ul:not(:first-child) {
+.header__top .header__content ul:not(:first-child) {
   margin-left: 50px;
 }
 
-.header header .header__content li {
+.header__top .header__content li {
   font-family: Montserrat;
   font-size: 14px;
   font-weight: 500;
@@ -143,37 +143,37 @@ input:focus {
   line-height: 17px;
 }
 
-.header header .header__content li a {
+.header__top .header__content li a {
   font-size: inherit;
-  font-weight: 600;
+  font-weight: bold;
   color: #ee1f23;
   line-height: inherit;
 }
 
 @media (min-width: 1025px) {
-  .header header .header__content li a {
+  .header__top .header__content li a {
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-  .header header .header__content li a:hover {
+  .header__top .header__content li a:hover {
     opacity: 0.5;
     color: #ab0000;
   }
 }
 
-.header header .header__content li span {
+.header__top .header__content li span {
   color: #ee1f23;
-  font-weight: 600;
+  font-weight: bold;
 }
 
-.header header .header__contact {
+.header__top .header__contact {
   border-radius: 20px;
   background: #e2dfdf;
   -webkit-box-shadow: -3px -3px 3px white, 3px 3px 5px rgba(70, 70, 70, 0.5);
           box-shadow: -3px -3px 3px white, 3px 3px 5px rgba(70, 70, 70, 0.5);
 }
 
-.header header .header__contact a {
+.header__top .header__contact a {
   background: -webkit-gradient(linear, left bottom, left top, from(#ddd), to(#fff));
   background: linear-gradient(0deg, #ddd, #fff);
   color: #7a7a7a;
@@ -197,7 +197,7 @@ input:focus {
 
 .header .header__navbar a::after {
   content: "";
-  background: #9fddd6;
+  background: #ffffff;
   width: 100%;
   height: 2px;
   -webkit-transform: scale(0);
@@ -290,8 +290,8 @@ input:focus {
 @media (max-width: 575.9px) {
   .header .header__banner .btn--box button {
     font-size: 0.88rem;
-    width: 30vw;
-    height: 8vw;
+    width: 120px;
+    height: 32px;
   }
 }
 
@@ -322,8 +322,8 @@ input:focus {
 
 @media (max-width: 575.9px) {
   .header .header__banner .btn--box a {
-    width: 8vw;
-    height: 8vw;
+    width: 32px;
+    height: 32px;
   }
 }
 
@@ -509,8 +509,8 @@ input:focus {
 @media (max-width: 575.9px) {
   .intro__content .btn--box button {
     font-size: 0.88rem;
-    width: 30vw;
-    height: 8vw;
+    width: 120px;
+    height: 32px;
   }
 }
 
@@ -541,15 +541,15 @@ input:focus {
 
 @media (max-width: 575.9px) {
   .intro__content .btn--box a {
-    width: 8vw;
-    height: 8vw;
+    width: 32px;
+    height: 32px;
   }
 }
 
 .process {
   background: url(../img/process/process-bg.jpg) no-repeat;
   background-size: cover;
-  padding: 80px;
+  padding: 80px 0;
 }
 
 .process__container {
@@ -766,8 +766,8 @@ input:focus {
 @media (max-width: 575.9px) {
   .info .btn--box button {
     font-size: 0.88rem;
-    width: 30vw;
-    height: 8vw;
+    width: 120px;
+    height: 32px;
   }
 }
 
@@ -798,14 +798,15 @@ input:focus {
 
 @media (max-width: 575.9px) {
   .info .btn--box a {
-    width: 8vw;
-    height: 8vw;
+    width: 32px;
+    height: 32px;
   }
 }
 
 .client {
   background-image: url(../img/client/bgclient.jpg);
   background-size: cover;
+  background-position: center;
 }
 
 .client__avatar {
@@ -884,6 +885,7 @@ input:focus {
 .contact {
   background-image: url(../img/contact/contacbg.png);
   background-size: cover;
+  background-position: center;
   padding: 50px 0;
 }
 
@@ -905,11 +907,12 @@ input:focus {
   }
   .contact__content a:hover {
     opacity: 0.5;
-    color: black;
+    color: white;
   }
 }
 
 .footer {
+  margin-top: 100px;
   font-size: 0.88rem;
   font-weight: 600;
   color: #505050;
@@ -1012,7 +1015,7 @@ input:focus {
   }
   .footer--icons a:hover {
     opacity: 0.5;
-    color: #2348d0;
+    color: #01d0ff;
   }
 }
 
@@ -1088,6 +1091,16 @@ input:focus {
     -webkit-transform: rotate(225deg);
             transform: rotate(225deg);
   }
+  .intro__content--title, .info__text h3, .client__title h3, .contact__text h3 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .intro__content--title span, .info__text h3 span, .client__title h3 span, .contact__text h3 span {
+    letter-spacing: 0.2em;
+  }
+  .process .container {
+    padding: 0 30px;
+  }
   .process ul {
     font-size: 1.5vw;
   }
@@ -1117,12 +1130,16 @@ input:focus {
     font-size: 30px !important;
     line-height: normal !important;
   }
+  .intro__content--title, .info__text h3, .client__title h3, .contact__text h3 {
+    font-size: 30px;
+    line-height: 35px;
+  }
   .info .card-footer {
     font-size: 0.76rem !important;
   }
   .client__avatar--name {
-    font-size: 25px;
-    line-height: 30px;
+    font-size: 16px;
+    line-height: 20px;
   }
   .client__footer--logo div {
     -ms-flex-wrap: wrap;
@@ -1135,6 +1152,9 @@ input:focus {
     width: 35px;
     height: 35px;
   }
+  .contact__content div img {
+    width: 40px;
+  }
   .process {
     padding: 4.5vw;
   }
@@ -1143,6 +1163,9 @@ input:focus {
   }
   .process ul li:first-child {
     font-size: 1.15rem;
+  }
+  .footer {
+    margin-top: 50px !important;
   }
   .footer--logo {
     margin-top: 0 !important;
@@ -1156,12 +1179,22 @@ input:focus {
   section:not(:first-child) {
     margin-top: 10vw !important;
   }
+  [class^="col-"] {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .header__btn-menu {
     width: 25px;
     height: 20px;
   }
   header {
     margin-bottom: 12vw !important;
+  }
+  header .container {
+    padding: 0 10px;
+  }
+  .header__top {
+    margin-bottom: 0;
   }
   .header__banner h2 {
     font-size: 5vw !important;
@@ -1175,15 +1208,27 @@ input:focus {
     width: 30px !important;
     height: 25px !important;
   }
+  .process {
+    padding: 10px;
+  }
+  .process .container {
+    padding: 0 15px;
+  }
   .info .card-footer {
     font-size: 0.88rem !important;
   }
   .client {
     padding-top: 5vw;
   }
+  .client .container {
+    padding: 0 10px;
+  }
+  .client .row {
+    margin: 0 -10px;
+  }
   .client__avatar--name {
-    font-size: 4.2vw;
-    line-height: 5vw;
+    font-size: 3.2vw;
+    line-height: 4vw;
   }
   .client__content img {
     width: 20px;
@@ -1198,6 +1243,9 @@ input:focus {
   .contact {
     padding: 5vw 0;
   }
+  .footer {
+    margin-top: 10vw !important;
+  }
   .footer--logo img {
     width: 120px;
   }
@@ -1211,13 +1259,10 @@ input:focus {
     width: 25vw;
   }
   .intro__content--title, .info__text h3, .client__title h3, .contact__text h3 {
-    font-size: 7.5vw;
+    font-size: 25px;
     font-weight: 700;
     color: #303030;
-    line-height: 9vw;
-  }
-  .intro__content--title span, .info__text h3 span, .client__title h3 span, .contact__text h3 span {
-    letter-spacing: 0.7vw;
+    line-height: 30px;
   }
   .contact__content div {
     display: -webkit-box;
@@ -1227,19 +1272,20 @@ input:focus {
         -ms-flex-align: center;
             align-items: center;
     width: 100%;
-    text-align: left !important;
   }
   .contact__content div img {
-    margin: 0 10px !important;
+    display: inline !important;
+    margin: 0 10px 0 0 !important;
   }
   .contact__content div a {
+    text-align: left !important;
     display: inline !important;
   }
   .contact__content div:nth-child(2) {
     margin-top: 1rem;
   }
   .footer--menu li {
-    width: 119px;
+    min-width: 119px;
   }
 }
 /*# sourceMappingURL=style.css.map */

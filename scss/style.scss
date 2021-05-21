@@ -67,7 +67,7 @@ input:focus {
 .header {
   background-image: url(../img/header/panner.jpg);
   background-size: cover;
-  header {
+  &__top {
     background: white;
     margin-bottom: 50px;
     .header__logo {
@@ -95,12 +95,12 @@ input:focus {
         font-family: Montserrat;
         @include fontStyle(14px, 17px, 500, #1a3761);
         a {
-          @include fontStyle(inherit, inherit, 600, #ee1f23);
+          @include fontStyle(inherit, inherit, bold, #ee1f23);
           @include hoverLink(rgb(171, 0, 0));
         }
         span {
           color: #ee1f23;
-          font-weight: 600;
+          font-weight: bold;
         }
       }
     }
@@ -126,7 +126,7 @@ input:focus {
       transition: 0.3s;
       &::after {
         content: "";
-        background: #9fddd6;
+        background: #ffffff;
         width: 100%;
         height: 2px;
         transform: scale(0);
@@ -225,7 +225,7 @@ input:focus {
 .process {
   background: url(../img/process/process-bg.jpg) no-repeat;
   background-size: cover;
-  padding: 80px;
+  padding: 80px 0;
   &__container {
     padding: 3%;
     background: white;
@@ -328,6 +328,7 @@ input:focus {
 .client {
   background-image: url(../img/client/bgclient.jpg);
   background-size: cover;
+  background-position: center;
   &__title {
     h3 {
       @extend .intro__content--title;
@@ -376,6 +377,7 @@ input:focus {
 .contact {
   background-image: url(../img/contact/contacbg.png);
   background-size: cover;
+  background-position: center;
   padding: 50px 0;
   &__text {
     h3 {
@@ -386,13 +388,14 @@ input:focus {
   &__content {
     @include fontStyle(0.88rem, 1.2rem, bold, #f8f8f8);
     a {
-      @include hoverLink(black);
+      @include hoverLink(white);
     }
   }
 }
 
 // footer
 .footer {
+  margin-top: 100px;
   @include fontStyle(0.88rem, 1.2rem, 600, #505050);
   h5 {
     @include fontStyle(1.25rem, 1.7rem, bold, #265bc5);
@@ -426,7 +429,7 @@ input:focus {
   &--icons {
     @include fontStyle(1.8rem, normal, normal, #265bc5);
     a {
-      @include hoverLink(rgb(35, 72, 208));
+      @include hoverLink(rgb(1, 208, 255));
     }
   }
 }
